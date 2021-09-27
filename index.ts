@@ -29,7 +29,6 @@ class Book {
     /**
      * This class models a limit order book for a given instrument.
      */
-    private next_id: number = 0;
     private best_bid: Limit | null = null;
     private best_ask: Limit | null = null;
     private bids: Map<number, Limit> = new Map();
@@ -167,8 +166,7 @@ class Book {
         }
     }
 
-    public process_limit_order(is_buy: boolean, price: number, size: number) {
-        let order_id = this.next_id++;
+    public process_limit_order(order_id: number, is_buy: boolean, price: number, size: number) {
         let remaining = size;
         price = Math.trunc(price * 100);
         if (is_buy) {
@@ -274,4 +272,5 @@ class Book {
         else return ret_val.volume;
     }
 };
+
 export { Book };
