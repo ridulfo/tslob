@@ -5,7 +5,7 @@
   "main": "index.ts",
   "scripts": {
     "test": "./node_modules/.bin/ava ./tests/*.ts --verbose",
-    "benchmark": "npx ts-node benchmarks/benchmark1.ts"
+    "benchmark": "npx ts-node benchmarks/benchmark_1.ts"
   },
   "author": "Nicolo Ridulfo",
   "license": "MIT",
